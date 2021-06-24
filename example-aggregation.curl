@@ -1,0 +1,39 @@
+curl --location --request POST 'http://localhost:9202/report/_doc/_search?size=0&filter_path=aggregations' \
+--header 'Content-Type: application/json' \
+--data-raw '
+{
+  "query": {
+    "constant_score": {
+      "filter": {
+        "range": {
+          "timestamp": {
+            "gte": "2021-04-23T14:40:00.1Z",
+            "lte": "2021-07-23T14:50:00.1Z",
+            "boost": 2.0
+          }
+        }
+      }
+    }
+  },
+  "aggs": {
+    "prices": {
+      "aggs": {
+        "double1_stats": {
+          "stats": {
+            "field": "double1"
+          }
+        },
+        "name_stats": {
+          "string_stats": {
+            "field": "name.keyword"
+          }
+        }
+      },
+      "histogram": {
+        "field": "timestamp",
+        "interval": 3600000
+      }
+    }
+  }
+}
+'
