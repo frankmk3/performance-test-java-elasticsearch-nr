@@ -9,7 +9,6 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
-import org.springframework.data.annotation.Id;
 import org.springframework.data.elasticsearch.annotations.DateFormat;
 import org.springframework.data.elasticsearch.annotations.Document;
 import org.springframework.data.elasticsearch.annotations.Field;
@@ -28,7 +27,6 @@ public class Report {
     @JsonIgnore
     public static final String DATE_FORMAT = "yyyy-MM-dd'T'HH:mm:ss.S'Z'";
 
-//    @Id
     protected String id;
     @Field(type = FieldType.Date, store = true, format = DateFormat.custom, pattern = DATE_FORMAT)
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = DATE_FORMAT)

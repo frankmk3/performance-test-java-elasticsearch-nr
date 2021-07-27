@@ -1,0 +1,173 @@
+curl --location --request PUT 'http://localhost:9202/report' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+        "mappings": {
+            "properties": {
+                "_class": {
+                    "type": "text",
+                    "index": false
+                },
+                "date": {
+                    "type": "long",
+                    "index": false
+                },
+                "date1": {
+                    "type": "long",
+                    "index": false
+                },
+                "date2": {
+                    "type": "long",
+                    "index": false
+                },
+                "date3": {
+                    "type": "long",
+                    "index": false
+                },
+                "date4": {
+                    "type": "long",
+                    "index": false
+                },
+                "date5": {
+                    "type": "long",
+                    "index": false
+                },
+                "date6": {
+                    "type": "long",
+                    "index": false
+                },
+                "date7": {
+                    "type": "long",
+                    "index": false
+                },
+                "double1": {
+                    "type": "float",
+                    "index": false
+                },
+                "double2": {
+                    "type": "float",
+                    "index": false
+                },
+                "double3": {
+                    "type": "float",
+                    "index": false
+                },
+                "double4": {
+                    "type": "float",
+                    "index": false
+                },
+                "double5": {
+                    "type": "float",
+                    "index": false
+                },
+                "double6": {
+                    "type": "float",
+                    "index": false
+                },
+                "double7": {
+                    "type": "float",
+                    "index": false
+                },
+                "double8": {
+                    "type": "float",
+                    "index": false
+                },
+                "enabled": {
+                    "type": "boolean",
+                    "index": false
+                },
+                "field1": {
+                    "type": "text",
+                    "index": false
+                },
+                "field2": {
+                    "type": "text",
+                    "index": false
+                },
+                "field3": {
+                    "type": "text",
+                    "index": false
+                },
+                "field4": {
+                    "type": "text",
+                    "index": false
+                },
+                "field5": {
+                    "type": "text",
+                    "index": false
+                },
+                "field6": {
+                    "type": "text",
+                    "index": false
+                },
+                "group": {
+                    "type": "text",
+                    "index": false,
+                    "fields": {
+                        "keyword": {
+                            "type": "keyword",
+                            "ignore_above": 256
+                        }
+                    }
+                },
+                "id": {
+                    "type": "text",
+                    "fields": {
+                        "keyword": {
+                            "type": "keyword",
+                            "ignore_above": 256
+                        }
+                    }
+                },
+                "name": {
+                    "type": "text",
+                    "index": false,
+                    "fields": {
+                        "keyword": {
+                            "type": "keyword",
+                            "ignore_above": 256
+                        }
+                    }
+                },
+                "numeric1": {
+                    "type": "long",
+                    "index": false
+                },
+                "numeric2": {
+                    "type": "long",
+                    "index": false
+                },
+                "numeric3": {
+                    "type": "long",
+                    "index": false
+                },
+                "numeric4": {
+                    "type": "long",
+                    "index": false
+                },
+                "numeric5": {
+                    "type": "long",
+                    "index": false
+                },
+                "numeric6": {
+                    "type": "long",
+                    "index": false
+                },
+                "numeric7": {
+                    "type": "long",
+                    "index": false
+                },
+                "numeric8": {
+                    "type": "long",
+                    "index": false
+                }
+            }
+        },
+        "settings": {
+            "index": {
+                "refresh_interval": "30s",
+                "number_of_shards": "1",
+                "number_of_replicas": "1"
+            },
+            "index.store.preload":["nvd", "dvd", "tim", "doc", "dim"]
+        }
+}'

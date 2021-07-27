@@ -4,7 +4,7 @@ Create a basic application to measure the performance using a elasticsearch java
 ## Installation and Getting started
 
 ### Pre requisites
-Java JDK 11 ``
+Java JDK 11 
 
 #### Optional
 To run the Elasticsearch instance using [Docker](https://docs.docker.com) and build and start the application run:
